@@ -1,6 +1,9 @@
 {
-  "name": "aeolint",
+  "name": "@didrod2539/aeolint",
   "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Local-first CLI that audits HTML/Markdown for SEO, answer-engine (AEO/GEO) readiness, structured data, content quality, performance risk and crawlability — and exports JSON/Markdown reports. No API key, no server.",
   "type": "module",
   "main": "./dist/index.js",

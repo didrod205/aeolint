@@ -4,10 +4,10 @@
 
 ### Lint your pages for SEO **and** answer-engine (AEO/GEO) readiness — locally, no API key.
 
-[![npm version](https://img.shields.io/npm/v/aeolint.svg?color=success)](https://www.npmjs.com/package/aeolint)
+[![npm version](https://img.shields.io/npm/v/@didrod2539/aeolint.svg?color=success)](https://www.npmjs.com/package/@didrod2539/aeolint)
 [![CI](https://github.com/didrod205/aeolint/actions/workflows/ci.yml/badge.svg)](https://github.com/didrod205/aeolint/actions/workflows/ci.yml)
-[![node](https://img.shields.io/node/v/aeolint.svg)](https://www.npmjs.com/package/aeolint)
-[![license](https://img.shields.io/npm/l/aeolint.svg)](./LICENSE)
+[![node](https://img.shields.io/node/v/@didrod2539/aeolint.svg)](https://www.npmjs.com/package/@didrod2539/aeolint)
+[![license](https://img.shields.io/npm/l/@didrod2539/aeolint.svg)](./LICENSE)
 
 A deterministic command-line auditor that scores your HTML/Markdown for **SEO**,
 **Answer Engine Optimization (AEO)**, **Generative Engine Optimization (GEO)**,
@@ -31,11 +31,11 @@ paragraphs, clean crawlability.
 an A–F grade and concrete fixes.
 
 ```bash
-npx aeolint scan ./public
+npx @didrod2539/aeolint scan ./public
 ```
 
 > 📸 _Screenshot / demo GIF placeholder:_ `./docs/screenshot.png` — record the
-> terminal running `npx aeolint scan examples/good.html examples/bad.html`.
+> terminal running `npx @didrod2539/aeolint scan examples/good.html examples/bad.html`.
 
 ## Why it exists
 
@@ -63,14 +63,14 @@ Perplexity — not just ranked.
 Run it without installing:
 
 ```bash
-npx aeolint scan ./public
+npx @didrod2539/aeolint scan ./public
 ```
 
 Or install globally / per-project:
 
 ```bash
-npm install -g aeolint      # global CLI
-npm install -D aeolint      # project dev-dependency (for CI)
+npm install -g @didrod2539/aeolint   # global CLI (provides the `aeolint` command)
+npm install -D @didrod2539/aeolint   # project dev-dependency (for CI)
 ```
 
 Node ≥ 18. Ships ESM + CJS + TypeScript types. Zero network calls unless you
@@ -176,7 +176,7 @@ Create `aeolint.config.json` (or run `aeolint init`):
 ## Programmatic API
 
 ```ts
-import { auditPage, buildReport, toMarkdown } from "aeolint";
+import { auditPage, buildReport, toMarkdown } from "@didrod2539/aeolint";
 
 const page = auditPage({ source: "post.html", html });
 console.log(page.score, page.grade, page.findings);
