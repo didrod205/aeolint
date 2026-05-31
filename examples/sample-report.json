@@ -1,0 +1,904 @@
+{
+  "tool": "aeolint",
+  "version": "0.1.0",
+  "generatedAt": "2026-05-31T09:37:19.449Z",
+  "summary": {
+    "pages": 3,
+    "score": 66,
+    "grade": "D",
+    "errors": 8,
+    "warnings": 26
+  },
+  "pages": [
+    {
+      "source": "examples/good.html",
+      "title": "How to Brew Pour-Over Coffee: A Beginner's Guide",
+      "score": 95,
+      "grade": "A",
+      "findings": [
+        {
+          "id": "meta.title",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "pass",
+          "message": "Title length looks good (48 chars)",
+          "weight": 3
+        },
+        {
+          "id": "meta.description",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "pass",
+          "message": "Meta description length looks good",
+          "weight": 3
+        },
+        {
+          "id": "meta.lang",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "pass",
+          "message": "Document language declared (lang=\"en\")",
+          "weight": 1
+        },
+        {
+          "id": "meta.viewport",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "pass",
+          "message": "Responsive viewport meta present",
+          "weight": 1
+        },
+        {
+          "id": "meta.charset",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "pass",
+          "message": "Character encoding declared",
+          "weight": 1
+        },
+        {
+          "id": "meta.canonical",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "pass",
+          "message": "Canonical URL present",
+          "weight": 2
+        },
+        {
+          "id": "meta.og",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "pass",
+          "message": "Open Graph tags present (title, description, image)",
+          "weight": 2
+        },
+        {
+          "id": "aeo.questions",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "pass",
+          "message": "5 question-style heading(s) found",
+          "detail": "What you need",
+          "weight": 2
+        },
+        {
+          "id": "aeo.faq",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "pass",
+          "message": "Has an FAQ section",
+          "weight": 2
+        },
+        {
+          "id": "aeo.answer",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "warning",
+          "message": "The opening paragraph is long",
+          "detail": "1109 chars",
+          "fix": "Lead with a ≤320-char direct answer, then expand.",
+          "weight": 2
+        },
+        {
+          "id": "aeo.summary",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "info",
+          "message": "No summary block — a TL;DR or key takeaways helps AI extraction",
+          "weight": 1
+        },
+        {
+          "id": "aeo.structured",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "pass",
+          "message": "Uses lists/tables (1 list(s), 0 table(s))",
+          "detail": "AI engines extract structured content readily",
+          "weight": 1
+        },
+        {
+          "id": "aeo.substance",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "pass",
+          "message": "Sufficient content to answer (197 words)",
+          "weight": 1
+        },
+        {
+          "id": "schema.valid",
+          "audit": "schema",
+          "category": "structured-data",
+          "severity": "pass",
+          "message": "All JSON-LD blocks are valid JSON",
+          "weight": 2
+        },
+        {
+          "id": "schema.types",
+          "audit": "schema",
+          "category": "structured-data",
+          "severity": "pass",
+          "message": "Detected schema types: Article, FAQPage",
+          "weight": 2
+        },
+        {
+          "id": "schema.article",
+          "audit": "schema",
+          "category": "structured-data",
+          "severity": "pass",
+          "message": "Article schema has the key fields",
+          "weight": 1
+        },
+        {
+          "id": "schema.faq",
+          "audit": "schema",
+          "category": "structured-data",
+          "severity": "pass",
+          "message": "FAQPage schema present (great for AI answers)",
+          "weight": 2
+        },
+        {
+          "id": "headings.h1",
+          "audit": "headings",
+          "category": "headings",
+          "severity": "pass",
+          "message": "Exactly one <h1>",
+          "weight": 3
+        },
+        {
+          "id": "headings.order",
+          "audit": "headings",
+          "category": "headings",
+          "severity": "pass",
+          "message": "Heading hierarchy is sequential",
+          "weight": 2
+        },
+        {
+          "id": "headings.empty",
+          "audit": "headings",
+          "category": "headings",
+          "severity": "pass",
+          "message": "No empty headings",
+          "weight": 1
+        },
+        {
+          "id": "content.length",
+          "audit": "content",
+          "category": "content",
+          "severity": "warning",
+          "message": "Thin content (197 words)",
+          "fix": "Aim for at least 300 words of substantive content.",
+          "weight": 2
+        },
+        {
+          "id": "content.readability",
+          "audit": "content",
+          "category": "content",
+          "severity": "pass",
+          "message": "Readable (Flesch 80.8)",
+          "weight": 1
+        },
+        {
+          "id": "content.img-alt",
+          "audit": "content",
+          "category": "content",
+          "severity": "pass",
+          "message": "All 1 image(s) have alt text",
+          "weight": 2
+        },
+        {
+          "id": "content.link-text",
+          "audit": "content",
+          "category": "content",
+          "severity": "pass",
+          "message": "Link text is descriptive",
+          "weight": 1
+        },
+        {
+          "id": "perf.blocking",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "pass",
+          "message": "Few render-blocking scripts (0)",
+          "weight": 1
+        },
+        {
+          "id": "perf.dimensions",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "pass",
+          "message": "All images have width/height (no layout shift)",
+          "weight": 2
+        },
+        {
+          "id": "perf.lazy",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "pass",
+          "message": "Images use lazy-loading where appropriate",
+          "weight": 1
+        },
+        {
+          "id": "perf.dom",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "pass",
+          "message": "Reasonable DOM size (35 nodes)",
+          "weight": 1
+        },
+        {
+          "id": "crawl.indexable",
+          "audit": "crawl",
+          "category": "crawlability",
+          "severity": "pass",
+          "message": "Page is indexable (no noindex)",
+          "weight": 2
+        },
+        {
+          "id": "crawl.canonical",
+          "audit": "crawl",
+          "category": "crawlability",
+          "severity": "pass",
+          "message": "Canonical URL declared",
+          "weight": 1
+        }
+      ],
+      "categories": [
+        {
+          "category": "seo",
+          "label": "SEO basics",
+          "score": 100,
+          "pass": 7,
+          "warning": 0,
+          "error": 0
+        },
+        {
+          "category": "aeo",
+          "label": "Answer-engine readiness (AEO/GEO)",
+          "score": 88,
+          "pass": 4,
+          "warning": 1,
+          "error": 0
+        },
+        {
+          "category": "structured-data",
+          "label": "Structured data",
+          "score": 100,
+          "pass": 4,
+          "warning": 0,
+          "error": 0
+        },
+        {
+          "category": "content",
+          "label": "Content quality",
+          "score": 83,
+          "pass": 3,
+          "warning": 1,
+          "error": 0
+        },
+        {
+          "category": "headings",
+          "label": "Headings & structure",
+          "score": 100,
+          "pass": 3,
+          "warning": 0,
+          "error": 0
+        },
+        {
+          "category": "performance",
+          "label": "Performance risks",
+          "score": 100,
+          "pass": 4,
+          "warning": 0,
+          "error": 0
+        },
+        {
+          "category": "crawlability",
+          "label": "Crawlability",
+          "score": 100,
+          "pass": 2,
+          "warning": 0,
+          "error": 0
+        }
+      ]
+    },
+    {
+      "source": "examples/bad.html",
+      "title": null,
+      "score": 38,
+      "grade": "F",
+      "findings": [
+        {
+          "id": "meta.title",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "error",
+          "message": "Missing <title> tag",
+          "fix": "Add a unique, descriptive <title>.",
+          "weight": 3
+        },
+        {
+          "id": "meta.description",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "error",
+          "message": "Missing meta description",
+          "fix": "Add a <meta name=\"description\"> that summarizes the page.",
+          "weight": 3
+        },
+        {
+          "id": "meta.lang",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing <html lang> attribute",
+          "fix": "Add lang to <html>, e.g. <html lang=\"en\">.",
+          "weight": 1
+        },
+        {
+          "id": "meta.viewport",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing viewport meta",
+          "fix": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">.",
+          "weight": 1
+        },
+        {
+          "id": "meta.charset",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing charset declaration",
+          "fix": "Add <meta charset=\"utf-8\">.",
+          "weight": 1
+        },
+        {
+          "id": "meta.canonical",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing canonical link",
+          "fix": "Add <link rel=\"canonical\" href=\"...\"> to avoid duplicate-content issues.",
+          "weight": 2
+        },
+        {
+          "id": "meta.og",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Incomplete Open Graph tags",
+          "detail": "missing: og:title, og:description, og:image",
+          "fix": "Add og:title, og:description and og:image for rich link previews.",
+          "weight": 2
+        },
+        {
+          "id": "aeo.questions",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "warning",
+          "message": "No question-style headings",
+          "fix": "Phrase some H2/H3s as the questions readers ask, e.g. \"How does X work?\".",
+          "weight": 2
+        },
+        {
+          "id": "aeo.faq",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "info",
+          "message": "No FAQ section — a short FAQ is highly quotable by AI answers",
+          "weight": 1
+        },
+        {
+          "id": "aeo.answer",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "pass",
+          "message": "Opens with a concise, quotable answer",
+          "detail": "<!doctype html>\nWelcome\n Our Products\n Details\n We sell stuff. It is good stuff.\n Want to know more? click here. Or read",
+          "weight": 2
+        },
+        {
+          "id": "aeo.summary",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "info",
+          "message": "No summary block — a TL;DR or key takeaways helps AI extraction",
+          "weight": 1
+        },
+        {
+          "id": "aeo.structured",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "warning",
+          "message": "No lists or tables",
+          "fix": "Break key points into bullet lists or comparison tables.",
+          "weight": 1
+        },
+        {
+          "id": "aeo.substance",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "warning",
+          "message": "Very little content (22 words)",
+          "fix": "Answer the question thoroughly — thin pages rarely get cited.",
+          "weight": 1
+        },
+        {
+          "id": "schema.present",
+          "audit": "schema",
+          "category": "structured-data",
+          "severity": "error",
+          "message": "No JSON-LD structured data found",
+          "fix": "Add schema.org JSON-LD (e.g. Article, Product, FAQPage) so engines understand the page.",
+          "weight": 3
+        },
+        {
+          "id": "headings.h1",
+          "audit": "headings",
+          "category": "headings",
+          "severity": "warning",
+          "message": "Multiple <h1> tags (2)",
+          "fix": "Use a single <h1>; demote the rest to <h2>.",
+          "weight": 2
+        },
+        {
+          "id": "headings.order",
+          "audit": "headings",
+          "category": "headings",
+          "severity": "warning",
+          "message": "Heading levels are skipped",
+          "fix": "Don't jump levels (e.g. H2 → H4); keep the outline sequential.",
+          "weight": 2
+        },
+        {
+          "id": "headings.empty",
+          "audit": "headings",
+          "category": "headings",
+          "severity": "pass",
+          "message": "No empty headings",
+          "weight": 1
+        },
+        {
+          "id": "content.length",
+          "audit": "content",
+          "category": "content",
+          "severity": "warning",
+          "message": "Thin content (22 words)",
+          "fix": "Aim for at least 300 words of substantive content.",
+          "weight": 2
+        },
+        {
+          "id": "content.img-alt",
+          "audit": "content",
+          "category": "content",
+          "severity": "error",
+          "message": "2/2 image(s) missing alt text",
+          "fix": "Add descriptive alt text — helps SEO and accessibility.",
+          "weight": 2
+        },
+        {
+          "id": "content.link-text",
+          "audit": "content",
+          "category": "content",
+          "severity": "warning",
+          "message": "2 non-descriptive link(s) like \"click here\"",
+          "fix": "Use descriptive anchor text that says where the link goes.",
+          "weight": 1
+        },
+        {
+          "id": "perf.blocking",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "warning",
+          "message": "6 render-blocking scripts",
+          "fix": "Add async/defer or move scripts to the end of <body>.",
+          "weight": 2
+        },
+        {
+          "id": "perf.dimensions",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "warning",
+          "message": "2 image(s) missing width/height (CLS risk)",
+          "fix": "Set width and height (or aspect-ratio) on images to prevent layout shift.",
+          "weight": 2
+        },
+        {
+          "id": "perf.lazy",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "pass",
+          "message": "Images use lazy-loading where appropriate",
+          "weight": 1
+        },
+        {
+          "id": "perf.base64",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "warning",
+          "message": "1 base64-inlined image(s)",
+          "fix": "Large data: URIs bloat the HTML and block rendering — serve real image files.",
+          "weight": 1
+        },
+        {
+          "id": "perf.dom",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "pass",
+          "message": "Reasonable DOM size (19 nodes)",
+          "weight": 1
+        },
+        {
+          "id": "crawl.noindex",
+          "audit": "crawl",
+          "category": "crawlability",
+          "severity": "error",
+          "message": "Page is set to noindex",
+          "detail": "noindex",
+          "fix": "Remove noindex if this page should appear in search.",
+          "weight": 3
+        },
+        {
+          "id": "crawl.canonical",
+          "audit": "crawl",
+          "category": "crawlability",
+          "severity": "warning",
+          "message": "No canonical URL",
+          "fix": "Add a self-referential canonical link.",
+          "weight": 1
+        }
+      ],
+      "categories": [
+        {
+          "category": "seo",
+          "label": "SEO basics",
+          "score": 27,
+          "pass": 0,
+          "warning": 5,
+          "error": 2
+        },
+        {
+          "category": "aeo",
+          "label": "Answer-engine readiness (AEO/GEO)",
+          "score": 67,
+          "pass": 1,
+          "warning": 3,
+          "error": 0
+        },
+        {
+          "category": "structured-data",
+          "label": "Structured data",
+          "score": 0,
+          "pass": 0,
+          "warning": 0,
+          "error": 1
+        },
+        {
+          "category": "content",
+          "label": "Content quality",
+          "score": 30,
+          "pass": 0,
+          "warning": 2,
+          "error": 1
+        },
+        {
+          "category": "headings",
+          "label": "Headings & structure",
+          "score": 60,
+          "pass": 1,
+          "warning": 2,
+          "error": 0
+        },
+        {
+          "category": "performance",
+          "label": "Performance risks",
+          "score": 64,
+          "pass": 2,
+          "warning": 3,
+          "error": 0
+        },
+        {
+          "category": "crawlability",
+          "label": "Crawlability",
+          "score": 13,
+          "pass": 0,
+          "warning": 1,
+          "error": 1
+        }
+      ]
+    },
+    {
+      "source": "examples/sample.md",
+      "title": null,
+      "score": 64,
+      "grade": "D",
+      "findings": [
+        {
+          "id": "meta.title",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "error",
+          "message": "Missing <title> tag",
+          "fix": "Add a unique, descriptive <title>.",
+          "weight": 3
+        },
+        {
+          "id": "meta.description",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "error",
+          "message": "Missing meta description",
+          "fix": "Add a <meta name=\"description\"> that summarizes the page.",
+          "weight": 3
+        },
+        {
+          "id": "meta.lang",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing <html lang> attribute",
+          "fix": "Add lang to <html>, e.g. <html lang=\"en\">.",
+          "weight": 1
+        },
+        {
+          "id": "meta.viewport",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing viewport meta",
+          "fix": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">.",
+          "weight": 1
+        },
+        {
+          "id": "meta.charset",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing charset declaration",
+          "fix": "Add <meta charset=\"utf-8\">.",
+          "weight": 1
+        },
+        {
+          "id": "meta.canonical",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing canonical link",
+          "fix": "Add <link rel=\"canonical\" href=\"...\"> to avoid duplicate-content issues.",
+          "weight": 2
+        },
+        {
+          "id": "meta.og",
+          "audit": "meta",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Incomplete Open Graph tags",
+          "detail": "missing: og:title, og:description, og:image",
+          "fix": "Add og:title, og:description and og:image for rich link previews.",
+          "weight": 2
+        },
+        {
+          "id": "aeo.questions",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "pass",
+          "message": "2 question-style heading(s) found",
+          "detail": "How is AEO different from SEO?",
+          "weight": 2
+        },
+        {
+          "id": "aeo.faq",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "info",
+          "message": "No FAQ section — a short FAQ is highly quotable by AI answers",
+          "weight": 1
+        },
+        {
+          "id": "aeo.answer",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "warning",
+          "message": "The opening paragraph is long",
+          "detail": "1100 chars",
+          "fix": "Lead with a ≤320-char direct answer, then expand.",
+          "weight": 2
+        },
+        {
+          "id": "aeo.summary",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "info",
+          "message": "No summary block — a TL;DR or key takeaways helps AI extraction",
+          "weight": 1
+        },
+        {
+          "id": "aeo.structured",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "pass",
+          "message": "Uses lists/tables (2 list(s), 0 table(s))",
+          "detail": "AI engines extract structured content readily",
+          "weight": 1
+        },
+        {
+          "id": "aeo.substance",
+          "audit": "aeo",
+          "category": "aeo",
+          "severity": "pass",
+          "message": "Sufficient content to answer (177 words)",
+          "weight": 1
+        },
+        {
+          "id": "schema.present",
+          "audit": "schema",
+          "category": "structured-data",
+          "severity": "error",
+          "message": "No JSON-LD structured data found",
+          "fix": "Add schema.org JSON-LD (e.g. Article, Product, FAQPage) so engines understand the page.",
+          "weight": 3
+        },
+        {
+          "id": "headings.h1",
+          "audit": "headings",
+          "category": "headings",
+          "severity": "pass",
+          "message": "Exactly one <h1>",
+          "weight": 3
+        },
+        {
+          "id": "headings.order",
+          "audit": "headings",
+          "category": "headings",
+          "severity": "pass",
+          "message": "Heading hierarchy is sequential",
+          "weight": 2
+        },
+        {
+          "id": "headings.empty",
+          "audit": "headings",
+          "category": "headings",
+          "severity": "pass",
+          "message": "No empty headings",
+          "weight": 1
+        },
+        {
+          "id": "content.length",
+          "audit": "content",
+          "category": "content",
+          "severity": "warning",
+          "message": "Thin content (177 words)",
+          "fix": "Aim for at least 300 words of substantive content.",
+          "weight": 2
+        },
+        {
+          "id": "content.readability",
+          "audit": "content",
+          "category": "content",
+          "severity": "pass",
+          "message": "Readable (Flesch 61.5)",
+          "weight": 1
+        },
+        {
+          "id": "content.link-text",
+          "audit": "content",
+          "category": "content",
+          "severity": "pass",
+          "message": "Link text is descriptive",
+          "weight": 1
+        },
+        {
+          "id": "perf.blocking",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "pass",
+          "message": "Few render-blocking scripts (0)",
+          "weight": 1
+        },
+        {
+          "id": "perf.dom",
+          "audit": "perf",
+          "category": "performance",
+          "severity": "pass",
+          "message": "Reasonable DOM size (22 nodes)",
+          "weight": 1
+        },
+        {
+          "id": "crawl.indexable",
+          "audit": "crawl",
+          "category": "crawlability",
+          "severity": "pass",
+          "message": "Page is indexable (no noindex)",
+          "weight": 2
+        },
+        {
+          "id": "crawl.canonical",
+          "audit": "crawl",
+          "category": "crawlability",
+          "severity": "warning",
+          "message": "No canonical URL",
+          "fix": "Add a self-referential canonical link.",
+          "weight": 1
+        }
+      ],
+      "categories": [
+        {
+          "category": "seo",
+          "label": "SEO basics",
+          "score": 27,
+          "pass": 0,
+          "warning": 5,
+          "error": 2
+        },
+        {
+          "category": "aeo",
+          "label": "Answer-engine readiness (AEO/GEO)",
+          "score": 83,
+          "pass": 3,
+          "warning": 1,
+          "error": 0
+        },
+        {
+          "category": "structured-data",
+          "label": "Structured data",
+          "score": 0,
+          "pass": 0,
+          "warning": 0,
+          "error": 1
+        },
+        {
+          "category": "content",
+          "label": "Content quality",
+          "score": 75,
+          "pass": 2,
+          "warning": 1,
+          "error": 0
+        },
+        {
+          "category": "headings",
+          "label": "Headings & structure",
+          "score": 100,
+          "pass": 3,
+          "warning": 0,
+          "error": 0
+        },
+        {
+          "category": "performance",
+          "label": "Performance risks",
+          "score": 100,
+          "pass": 2,
+          "warning": 0,
+          "error": 0
+        },
+        {
+          "category": "crawlability",
+          "label": "Crawlability",
+          "score": 83,
+          "pass": 1,
+          "warning": 1,
+          "error": 0
+        }
+      ]
+    }
+  ]
+}

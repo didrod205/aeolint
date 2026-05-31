@@ -1,0 +1,13 @@
+{
+  "minScore": 80,
+  "disableCategories": [],
+  "ignore": ["meta.og"],
+  "thresholds": {
+    "minWords": 250,
+    "descriptionMax": 160
+  },
+  "categoryWeights": {
+    "aeo": 1.5,
+    "structured-data": 1.2
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "aeolint",
+  "version": "0.1.0",
+  "description": "Local-first CLI that audits HTML/Markdown for SEO, answer-engine (AEO/GEO) readiness, structured data, content quality, performance risk and crawlability — and exports JSON/Markdown reports. No API key, no server.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "aeolint": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "example": "node dist/cli.js scan examples/good.html examples/bad.html",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "seo",
+    "aeo",
+    "geo",
+    "answer-engine-optimization",
+    "seo-audit",
+    "seo-cli",
+    "structured-data",
+    "json-ld",
+    "schema-org",
+    "content-audit",
+    "ai-search",
+    "lighthouse-alternative"
+  ],
+  "author": "didrod205 (https://github.com/didrod205)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didrod205/aeolint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/didrod205/aeolint/issues"
+  },
+  "homepage": "https://github.com/didrod205/aeolint#readme",
+  "dependencies": {
+    "cac": "^6.7.14",
+    "marked": "^14.1.3",
+    "node-html-parser": "^6.1.13",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
