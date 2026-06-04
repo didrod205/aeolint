@@ -144,7 +144,7 @@ See [`examples/sample-report.md`](./examples/sample-report.md) and
 | --- | --- |
 | **SEO basics** | title length, meta description, `lang`, viewport, charset, canonical, Open Graph |
 | **Answer-engine (AEO/GEO)** | question-style headings, concise lead answer, FAQ section, TL;DR/summary, lists & tables, substance |
-| **Structured data** | JSON-LD present & valid, `@type` detection, `Article`/`FAQPage` completeness |
+| **Structured data** | JSON-LD present & valid, `@type` detection, and **Google rich-result eligibility** — per-type required/recommended fields for Article, Product, FAQPage, Recipe, Event, JobPosting, Breadcrumb, Organization, LocalBusiness, Review, Video, HowTo, WebSite sitelinks & more |
 | **Content quality** | word depth, Flesch readability, image `alt` coverage, descriptive link text |
 | **Headings** | single `<h1>`, no skipped levels, no empty headings |
 | **Performance risk** | render-blocking scripts, image dimensions (CLS), lazy-loading, base64 bloat, DOM size |
@@ -152,6 +152,32 @@ See [`examples/sample-report.md`](./examples/sample-report.md) and
 
 Scoring is transparent: each check is a weighted *pass / warning / error*, rolled
 up per category and combined into a config-weighted overall score and A–F grade.
+
+### Rich-result eligibility (the deep structured-data check)
+
+A page can have perfectly valid JSON-LD and still **win no rich result** — because
+Google only renders review stars, FAQ accordions, recipe cards, job postings, etc.
+when the *required* properties for that feature are present. Those requirements are
+an exact, documented spec, so aeolint checks them deterministically — no
+copy-pasting each URL into the Rich Results Test:
+
+```
+✗ Product snippet / Merchant listing (Product) is NOT eligible for a rich result
+    Missing required: one of: offers, review, aggregateRating
+    → Add the required property so Google can render the Product rich result.
+
+⚠ Article (Article) is eligible, but missing recommended fields
+    Recommended: image, dateModified
+
+✓ FAQ (FAQPage) is eligible for a rich result
+```
+
+This is the check that catches a refactor silently dropping `offers` from a product
+page — the kind of regression that quietly tanks click-through. Put
+`aeolint scan ./dist --min-score 85` in CI and the build fails the moment a page
+loses its rich-result eligibility. Covered features: **Article, Product, FAQPage,
+Recipe, Event, JobPosting, BreadcrumbList, Organization/Logo, LocalBusiness, Review,
+VideoObject, HowTo, WebSite (sitelinks searchbox), SoftwareApplication.**
 
 ## Configuration
 

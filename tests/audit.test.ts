@@ -29,7 +29,8 @@ describe("end-to-end audit", () => {
     const found = problemIds({ source: "bad", html: bad });
     expect(found).toContain("meta.title");
     expect(found).toContain("meta.description");
-    expect(found).toContain("schema.present");
+    // The bad page's Product lacks offers/review/aggregateRating → not eligible.
+    expect(found).toContain("schema.rich.product");
     expect(found).toContain("crawl.noindex");
   });
 

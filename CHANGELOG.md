@@ -4,6 +4,30 @@ All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/) and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [0.2.0] - 2026-06-04
+
+### Added
+
+- **Google rich-result eligibility engine** (`src/richResults.ts`). For every
+  recognised schema.org type, aeolint now checks the **required** and
+  **recommended** properties Google documents for that feature and reports
+  whether the page would actually win the rich result — deterministically, with
+  no Rich Results Test copy-paste. Covered features: Article, Product, FAQPage,
+  Recipe, Event, JobPosting, BreadcrumbList, Organization/Logo, LocalBusiness,
+  Review, VideoObject, HowTo, WebSite (sitelinks searchbox), SoftwareApplication.
+- Nested requirement checks (e.g. `offers.price` + `offers.priceCurrency`,
+  `aggregateRating.ratingValue`, `mainEntity.acceptedAnswer.text`,
+  `potentialAction.query-input`).
+- New findings: `schema.rich.<type>` — an error when a type is **not eligible**
+  (missing required), a warning when eligible but **missing recommended** fields,
+  and a pass when fully eligible. Each links to the relevant Google doc.
+
+### Changed
+
+- The structured-data audit now evaluates only top-level / `@graph` items as
+  rich-result candidates (sub-objects like `author`/`publisher` are treated as
+  properties, not standalone items), eliminating false positives.
+
 ## [0.1.0] - 2026-05-31
 
 ### Added
